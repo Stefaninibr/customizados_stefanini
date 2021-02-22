@@ -1,0 +1,31 @@
+CREATE OR REPLACE PACKAGE STEF_SCRIPTS_CPROC IS
+  FUNCTION parametros RETURN VARCHAR2;
+  FUNCTION nome RETURN VARCHAR2;
+  FUNCTION tipo RETURN VARCHAR2;
+  FUNCTION versao RETURN VARCHAR2;
+  FUNCTION descricao RETURN VARCHAR2;
+  FUNCTION modulo RETURN VARCHAR2;
+  FUNCTION CLASSIFICACAO RETURN VARCHAR2;
+  FUNCTION EXECUTAR(P_EMPRESA VARCHAR2,
+                    P_DATAINICIAL DATE,
+                    P_DATAFINAL DATE,
+                    P_AJUSTE VARCHAR2,
+                    P_5_TIPO VARCHAR2,
+                    P_5_CODSITPISCOFINS VARCHAR2,
+                    P_5_CFOPS VARCHAR2,
+                    P_5_PRODUTOS VARCHAR2,
+                    P_5_NOTASFISCAIS VARCHAR2,
+                    --P_4_INDICADORFATURA VARCHAR2,
+                    --P_4_CFOPS VARCHAR2,
+                    P_3_CODSITCSTB VARCHAR2,
+                    P_3_COD_TRIBUTACAO_ICMS VARCHAR2,
+                    P_3_CODSSITCSTB VARCHAR2,
+                    P_2_TIPODOCUMENTO VARCHAR2,
+                    P_2_COD_TRIB_IPI VARCHAR2,
+                    P_2_COD_TRIBUTACAO_IPI VARCHAR2,
+                    P_2_CODS_TRIB_IPI VARCHAR2,
+                    P_1_TIPODOCUMENTO VARCHAR2,
+                    P_1_CODFEDERAL VARCHAR2,
+                    P_1_CODTRIBIPI VARCHAR2) RETURN INTEGER;
+END;
+/
